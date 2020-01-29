@@ -1,0 +1,51 @@
+@font-face {
+	font-family: MonumentExtended-Ultrabold;
+	src: url('../fonts/MonumentExtended-Ultrabold.otf') format('openType');
+}
+
+@font-face {
+	font-family: MonumentExtended-Regular;
+	src: url('../fonts/MonumentExtended-Regular.otf') format('openType');
+}
+
+$font-size: (
+	'small': 12px,
+	'default': 14px,
+	'big': 16px,
+	'bigger': 22px,
+	'large-title': 65px,
+);
+
+$font-family: (
+	'montserrat': 'Montserrat',
+	'monument-ultrabold': 'MonumentExtended-Ultrabold',
+	'monument-regular': 'MonumentExtended-Regular',
+);
+
+$font-weight: (
+	'bold': 700,
+);
+
+$hero-title: (
+	'small': 22px,
+	'medium': 48px,
+	'large': 62px,
+);
+
+$font-size-features-subtitle: (
+	'small': 23px,
+	'medium': 26px,
+	'large': 32px,
+);
+
+$font-size-feature-title: (
+	'small': 14px,
+	'medium': 18px,
+	'large': 22px,
+);
+
+$font-size-feature-description: (
+	'small': 12px,
+	'medium': 14px,
+	'large': 16px,
+);

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>THEPHANTOM</title>
+	<link rel="stylesheet" href="frontend/css/main.css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+</head>
+<body>
+	<div class="loading-view">
+		<div class="loading-view__wrapper">
+			<div class="loading-bar"></div>
+			<div class="loading-fill"></div>
+		</div>
+	</div>
+
+	<div class="navigation-mobile">
+		<div class="navigation-mobile__home"><a href="./index.html">THEPHANTOM</a></div>
+		<span class="hamburger fas fa-bars"></span>
+	</div>
+
+	<nav class="navigation">
+		<i class="close fas fa-times"></i>
+
+		<ul class="navigation__items navigation__home">
+			<li class="navigation__item navigation__item--home"><a href="./index.html">THEPHANTOM</a></li>
+		</ul>
+		<ul class="navigation__items navigation__menu">
+			<li class="navigation__item navigation-item--features"><a href="#" class="i18next">Features</a></li>
+			<li class="navigation__item navigation-item--hero"><a href="#" class="i18next">Controller</a></li>
+		</ul>
+		<ul class="navigation__items navigation__lang">
+			<li class="navigation__item navigation__item--lang" data-lang="en"><a href="./index.html?lang=en">En</a></li>
+			<li class="navigation__item navigation__item--lang" data-lang="fi"><a href="./index.html?lang=fi">Fi</a></li>
+			<li class="navigation__item navigation__item--lang" data-lang="se"><a href="./index.html?lang=se">Se</a></li>
+		</ul>
+	</nav>
+
+	<div class="container">
+		<div class="hero-container">
+			<div class="hero-container__wrapper">
+				<div class="hero">
+					<div class="hero__title">
+						<span>Phantom<br/> Controller.</span>
+					</div>
+					<div class="hero__media-container">
+						<video class="hero__media" muted>
+							<source src="frontend/images/video_footage_1.mp4" type="video/mp4">
+							<img src="frontend/images/video_footage_1_frame.jpg" alt="phantom">
+						</video>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="features-container">
+			<div class="features-container__wrapper">
+				<div class="features__content">
+					<div class="subtitle">The all <br/> new controller</div>
+
+					<div class="features">
+						<div class="feature__items">
+							<div class="feature__item">
+								<div class="item-title i18next">New haptics.</div>
+								<div class="item-description i18next">Forget what you knew so far about controllers. This is the next step when talking about gaming!</div>
+							</div>
+							<div class="feature__item">
+								<div class="item-title i18next">Features.</div>
+								<div class="item-description i18next">The new Phantom Controller comes with a bunch of new features that will maximize your gaming experience.</div>
+							</div>
+							<div class="feature__item">
+								<div class="item-title i18next">Statement.</div>
+								<div class="item-description i18next">We are here to make a statement. Set a statement with the Phantom Controller and show it.</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="features__media-container">
+					<video class="content__media" muted>
+						<source src="frontend/images/video_footage_2.mp4" type="video/mp4">
+						<img src="frontend/images/video_footage_2_frame.jpg" alt="phantom">
+					</video>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="frontend/js/main.js"></script>
+	<script src="frontend/js/translations.js"></script>
+</body>
+</html>

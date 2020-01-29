@@ -1,0 +1,16 @@
+@mixin container() {
+	padding-left: 20px;
+	padding-right: 20px;
+	max-width: 1400px;
+	margin: 0 auto;
+
+	@include breakpoint($tablet) {
+		padding-left: 50px;
+		padding-right: 50px;
+	}
+
+	@include breakpoint($desktop) {
+		padding-left: 200px;
+		padding-right: 200px;
+	}
+}

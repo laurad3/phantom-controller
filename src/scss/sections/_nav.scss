@@ -1,0 +1,158 @@
+.navigation {
+	position: fixed;
+	top: 0;
+	background-color: map-get($color-ui, 'black');
+	left: 0;
+	right: 0;
+	z-index: map-get($z-index, 'above');
+	bottom: 0;
+	padding: 60px 0 40px;
+	display: none;
+
+	&.show {
+		display: flex;
+		flex-direction: column;
+	}
+}
+
+.navigation-mobile {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	color: map-get($color-ui, 'white');
+	text-align: center;
+	z-index: map-get($z-index, 'above');
+	padding-top: 60px;
+
+	.hamburger {
+		position: absolute;
+		top: 25px;
+		right: 25px;
+	}
+}
+
+.close {
+	position: absolute;
+	top: 23px;
+	right: 25px;
+	font-size: 20px;
+}
+
+.navigation__items {
+	text-align: center;
+}
+
+.navigation__item {
+	width: 100%;
+	color: map-get($color-ui, 'white');
+	list-style: none;
+	font-family: map-get($font-family, 'montserrat');
+	font-size: map-get($font-size, 'default');
+}
+
+.navigation__item:not(.navigation__item--home) {
+	a {
+		position: relative;
+	}
+
+	&.is-active a,
+	a:hover {
+    	&::before {
+    		position: absolute;
+    		top: 100%;
+    		left: 0;
+    		content: '';
+    		background-color: map-get($color-ui, 'white');
+    		width: 100%;
+    		height: 2px;
+    	}
+    }
+}
+
+.navigation__item--home {
+	margin-top: 1px; // level font family with other items
+	letter-spacing: 6px;
+	font-family: map-get($font-family, 'monument-regular');
+	font-size: map-get($font-size, 'big');
+
+	a {
+		display: block;
+	}
+}
+
+.navigation__home {
+	padding: 0 0 40px;
+}
+
+.navigation__menu {
+	flex-grow: 1;
+	line-height: 2.5;
+}
+
+.navigation__lang {
+	display: flex;
+	width: 100%;
+    max-width: 100px;
+    margin: 0 auto;
+}
+
+.navigation__item--lang {
+	text-transform: uppercase;
+	position: relative;
+}
+
+.navigation-mobile__home {
+	@extend .navigation__item--home;
+}
+
+@include breakpoint($tablet) {
+	.navigation {
+		@include container;
+		padding-top: 0;
+		padding-bottom: 0;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		height: 100px;
+	}
+
+	.navigation__items {
+		display: flex;
+		justify-content: space-between;
+		width: calc(100% / 3);
+	}
+
+	.navigation__home,
+	.navigation__lang,
+	.navigation__menu {
+		padding: 0;
+	}
+
+	.navigation__lang {
+		order: 2;
+		max-width: none;
+	}
+
+	.navigation__home {
+		order: 1;
+	}
+
+	.navigation__menu {
+		order: 0;
+		flex-grow: 0;
+	}
+
+	.navigation-mobile,
+	.close {
+		display: none;
+	}
+}
+
+@include breakpoint($desktop) {
+	.navigation__lang {
+		padding-right: 80px;
+	}
+
+}

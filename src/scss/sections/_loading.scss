@@ -1,0 +1,40 @@
+.loading-view {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: map-get($color-ui, 'black');
+	z-index: map-get($z-index, 'popup');
+}
+
+.loading-view__wrapper {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.loading-bar,
+.loading-fill {
+	&:before {
+		display: block;
+		content: '';
+		width: 200px;
+		height: 1px;
+		z-index: map-get($z-index, 'above');
+	}
+}
+
+.loading-bar {
+	&:before {
+		background-color: map-get($color-ui, 'mine-shaft');
+	}
+}
+
+.loading-fill {
+	&:before {
+		width: 0;
+		background-color: map-get($color-ui, 'white');
+	}
+}

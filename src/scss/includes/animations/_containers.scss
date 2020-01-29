@@ -1,0 +1,39 @@
+@keyframes swipeOutHeroSection {
+	0% {
+		top: 0;
+	}
+
+	100% {
+		top: -200px;
+	}
+}
+
+@keyframes swipeOutHeroSectionOpacity {
+	0% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 0;
+	}
+}
+
+@keyframes swipeInFeaturesSection {
+	0% {
+		top: 200px;
+	}
+
+	100% {
+		top: 0;
+	}
+}
+
+@keyframes swipeInFeaturesSectionOpacity {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}

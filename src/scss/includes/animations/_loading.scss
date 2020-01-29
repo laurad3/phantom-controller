@@ -1,0 +1,42 @@
+$loadingTime: 4s;
+
+@keyframes loadingBarFill {
+	0% {
+		width: 0;
+	}
+
+	100% {
+		width: 33.33%;
+	}
+}
+
+@keyframes loadingBarFill2 {
+	0% {
+		width: 33.33%
+	}
+
+	100% {
+		width: 66.66%;
+	}
+}
+
+@keyframes loadingBarFill3 {
+	0% {
+		width: 66.66%;
+	}
+
+	100% {
+		width: 100%;
+	}
+}
+
+@keyframes loadingViewFadeOut {
+	0% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 0;
+		z-index: map-get($z-index, 'hide');
+	}
+}

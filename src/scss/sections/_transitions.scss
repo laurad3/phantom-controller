@@ -1,0 +1,146 @@
+// loading bar
+.loading-fill {
+	&:before {
+		animation: loadingBarFill 1s cubic-bezier(0.38, 0.18, 0, 0.93) 1s, 
+			loadingBarFill2 1.5s cubic-bezier(0.77, 0.05, 0.29, 0.99) 2s,
+			loadingBarFill3 1s cubic-bezier(0.54, 0.1, 0.45, 0.84) 3.5s;
+		animation-fill-mode: forwards;
+	}
+}
+
+.loading-view {
+	opacity: 1;
+	animation: loadingViewFadeOut linear .2s;
+	animation-delay: 4.5s;
+	animation-fill-mode: forwards;
+}
+
+// hero
+.hero__title {
+	opacity: 0;
+	animation: slideInAnimation cubic-bezier(0.38, 0.18, 0, 0.93) 1.5s;
+	animation-fill-mode: forwards;
+	animation-delay: calc(#{$loadingTime} + 1.2s);
+
+	span {
+		animation: slideInAnimationColor ease-in-out 1.4s;
+		animation-fill-mode: forwards;
+		animation-delay: calc(#{$loadingTime} + 1.4s);
+	}
+}
+
+// nav
+.navigation__item--home a {
+	opacity: 0;
+	animation: fadeInScaleAnimation ease 1.5s;
+	animation-fill-mode: forwards;
+	animation-delay: calc(#{$loadingTime} + .3s);
+}
+
+.navigation__item:not(.navigation__item--home) a {
+	opacity: 0;
+	animation: fadeInAnimation ease-in 1.2s;
+	animation-fill-mode: forwards;
+	animation-delay: calc(#{$loadingTime} + .6s);
+}
+
+.navigation-mobile__home a {
+	animation: fadeInScaleAnimation ease 1.5s;
+	animation-fill-mode: forwards;
+	animation-delay: calc(#{$loadingTime} + 1.3s);
+}
+
+.navigation {
+	&.show {
+		.navigation__item--home a {
+			animation-delay: .3s;
+		}
+
+		.navigation__item:not(.navigation__item--home) a {
+			animation-delay: .6s;
+		}
+
+		.navigation-mobile__home a {
+			animation-delay: 1.3s;
+		}
+	}
+}
+
+@include breakpoint($tablet) {
+	.navigation__item--home a {
+		animation: fadeInScaleAnimation ease 1.5s;
+		animation-fill-mode: forwards;
+		animation-delay: calc(#{$loadingTime} + 1.3s);
+	}
+
+	.navigation__item:not(.navigation__item--home) a {
+		animation: fadeInAnimation ease-in 1.2s;
+		animation-fill-mode: forwards;
+		animation-delay: calc(#{$loadingTime} + 1.6s);
+	}
+}
+
+// features
+.feature__item {
+	&:before {
+		height: 0;
+	}
+
+	&.start-bar-animation {
+		&:before {
+			animation: fillBar linear 5s;
+		}
+	}
+
+	&:last-of-type {
+		&:before {
+			animation-fill-mode: forwards;
+		}
+	}
+
+	.item-description {
+		height: 0;
+		opacity: 0;
+		padding-top: 0;
+
+		&.start-animation {
+			animation: swipeUpAndFadeIn cubic-bezier(0.18, 0.85, 1, 0.87) .3s;
+			animation-fill-mode: forwards;
+			animation-delay: .1s;
+		}
+
+		&.stop-animation {
+			animation: swipeDownAndFadeOut cubic-bezier(0.41, 0.01, 1, 0.87) .3s;
+			animation-fill-mode: forwards;
+		}
+	}
+}
+
+// containers
+.hero-container {
+	top: 0;
+	animation: swipeOutHeroSection ease-in .6s;
+	animation-fill-mode: forwards;
+	animation-delay: calc(#{$loadingTime} + 4s);
+}
+
+.hero-container__wrapper {
+	opacity: 1;
+	animation: swipeOutHeroSectionOpacity cubic-bezier(0.41, 0.01, 1, 1) .6s;
+	animation-fill-mode: forwards;
+	animation-delay: calc(#{$loadingTime} + 3.8s);
+}
+
+.features-container {
+	top: 200px;
+	animation: swipeInFeaturesSection cubic-bezier(0.33, 0.18, 0.21, 0.9) .6s;
+	animation-fill-mode: forwards;
+	animation-delay: calc(#{$loadingTime} + 4.2s);
+}
+
+.features-container__wrapper {
+	opacity: 0;
+	animation: swipeInFeaturesSectionOpacity ease-in .9s;
+	animation-fill-mode: forwards;
+	animation-delay: calc(#{$loadingTime} + 4.2s);
+}

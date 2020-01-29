@@ -1,0 +1,52 @@
+.hero {
+	background-color: map-get($color-ui, 'black');
+	padding: 70px 0 0;
+}
+
+.hero__media-container {
+	width: 320px;
+	margin: 0 auto;
+}
+
+.hero__title {
+	font-size: map-get($hero-title, 'small');
+	-webkit-text-stroke-width: 2px;
+	-webkit-text-stroke-color: map-get($color-ui, 'white');
+	text-align: center;
+	font-family: map-get($font-family, 'monument-regular');
+	text-transform: uppercase;
+	letter-spacing: 5px;
+	line-height: 1.4;
+}
+
+.hero__media {
+	width: 100%;
+}
+
+.hero-container {
+	padding: inherit;
+	position: absolute;
+	left: 0;
+	right: 0;
+}
+
+@include breakpoint($tablet) {
+	.hero__title {
+		font-size: map-get($hero-title, 'medium');
+	}
+
+	.hero__media-container {
+		width: 650px;
+	}
+}
+
+@include breakpoint($desktop) {
+	.hero__title {
+		font-size: map-get($hero-title, 'large');
+		line-height: 1.2;
+	}
+
+	.hero__media-container {
+		width: 800px;
+	}
+}
